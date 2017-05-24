@@ -1,0 +1,26 @@
+{% extends '::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/news_list.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    {% for news in newsList %}
+
+        <div class="news_list_news">
+
+            <h3 class="news_list_news_title">{{ news.title }}</h3>
+
+            <p class="news_list_news_date"><em>Publié le {{ news.dateCreate | date('d/m à H:i:s') }}</em></p>
+
+            <p class="news_list_news_content">{{ news.description }}</p>
+
+
+        </div>
+
+    {% endfor %}
+
+
+{% endblock %}

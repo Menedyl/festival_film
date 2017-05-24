@@ -1,0 +1,47 @@
+{% extends '::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/films.css') }}">
+{% endblock %}
+
+{% block body %}
+    <p id="films_description">
+        Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis et stationibus servabantur agrariis,
+        laevorsum flexo itinere Osdroenae subsederat extimas partes, novum parumque aliquando temptatum commentum
+        adgressus. quod si impetrasset, fulminis modo cuncta vastarat. erat autem quod cogitabat huius modi.
+    </p>
+
+    <table id="films_table">
+        <tr id="films_table_categorie">
+            <th id="films_table_title">Nom du film</th>
+            <th>Synopsis</th>
+            <th>Date</th>
+            <th>Heure</th>
+            <th>Inscription</th>
+        </tr>
+        {% for film in films %}
+
+            {% if film.diffusion > currentDate %}
+
+                <tr>
+                    <th>{{ film.title }}</th>
+                    <th>{{ film.description }}</th>
+                    <th>{{ film.diffusion | date("d/m") }}</th>
+                    <th>{{ film.diffusion | date("H:i") }}</th>
+                    <th>
+                        <a class="films_table_link_registration" href="{{ path('film_registration', {"id" : film.id} ) }}">
+                            <button class="btn films_table_btn_registration">
+                                Inscription
+                            </button>
+                        </a>
+                    </th>
+                </tr>
+
+            {% endif %}
+
+        {% endfor %}
+
+    </table>
+
+{% endblock %}

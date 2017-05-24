@@ -1,0 +1,50 @@
+{% extends '::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div id="contact_form" class="col-sm-8">
+
+        {{ form_start(formContact) }}
+
+        <fieldset>
+
+            <legend>Nous contacter</legend>
+
+
+            <div class="form-group">
+
+                {{ form_label(formContact.name, 'Votre nom :', {'attr' : {'class' : 'control-label'}}) }}
+                {{ form_errors(formContact.name) }}
+                {{ form_widget(formContact.name, {'attr' : {'class' : 'form-control'}}) }}
+            </div>
+
+            <div class="form-group">
+
+                {{ form_label(formContact.mail, 'Votre adresse mail :', {'attr' : {'class' : 'control-label'}}) }}
+                {{ form_errors(formContact.mail) }}
+                {{ form_widget(formContact.mail, {'attr' : {'class' : 'form-control'}}) }}
+            </div>
+
+            <div class="form-group">
+
+                {{ form_label(formContact.message, 'Votre message :', {'attr' : {'class' : 'control-label'}}) }}
+                {{ form_errors(formContact.message) }}
+                {{ form_widget(formContact.message, {'attr' : {'class' : 'form-control'}}) }}
+            </div>
+
+            {{ form_rest(formContact) }}
+
+            <button type="submit" class="btn" id="contact_btn_valid">Valider</button>
+
+
+        </fieldset>
+
+        {{ form_end(formContact) }}
+
+    </div>
+
+{% endblock %}

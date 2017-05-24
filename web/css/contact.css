@@ -1,0 +1,21 @@
+legend {
+    color: #F5871F;
+}
+
+#contact_btn_valid {
+    float: right;
+    color: white;
+    background-color: #F5871F;
+    border-color: black;
+    font-weight: bold;
+    font-size: large;
+}
+
+#contact_btn_valid:hover {
+    color: #916319;
+}
+
+#contact_form {
+    color: #F5871F;
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8"/>
+
+    <title>{% block title %}Festival de films - {% endblock %}</title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+
+        <h1 id="layout_title" class="col-sm-offset-4 col-sm-4">Festival de Films</h1>
+
+    </div>
+
+
+    {% block menu %}
+
+        {{ include('::menu.html.twig') }}
+
+    {% endblock %}
+
+    {% for message in app.session.flashbag.get('info') %}
+
+        <div id="alert" class="alert alert-info">
+            {{ message }}
+        </div>
+
+    {% endfor %}
+
+    <div id="layout_news" class="col-sm-3">
+        {% block news %}
+
+            {{ render(controller('AppBundle:News:panel')) }}
+
+        {% endblock %}
+    </div>
+
+    <div id="layout_body" class="col-sm-push-1 col-sm-8">
+
+
+        {% block body %}{% endblock %}
+
+    </div>
+
+    {% block javascripts %}{% endblock %}
+
+</div>
+</body>
+
+</html>

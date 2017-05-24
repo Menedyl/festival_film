@@ -1,0 +1,35 @@
+#films_table, #films_table tr, #films_table th {
+    border: solid 1px black;
+}
+
+#films_table th{
+    text-align: center;
+    padding: 1em;
+}
+
+#films_table_title{
+    width: 15%;
+}
+
+#films_table_categorie{
+    background-color: #F5871F;
+    color: white;
+}
+
+#films_description{
+    text-align: center;
+}
+
+.films_table_link_registration{
+    color: white;
+}
+
+.films_table_btn_registration{
+    background-color: #F5871F;
+    border-color: black;
+}
+
+.films_table_btn_registration:hover{
+    color: #916319;
+}
+

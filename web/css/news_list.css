@@ -1,0 +1,12 @@
+.news_list_news{
+    border-bottom: solid 1px #F5871F;
+}
+
+.news_list_news_title{
+    color: #F5871F;
+    font-weight: bold;
+}
+
+.news_list_news_date{
+    font-size: x-small;
+}

@@ -1,0 +1,24 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }}
+    Accueil
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <p id="home_desciption">Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis et stationibus servabantur agrariis,
+        laevorsum flexo itinere Osdroenae subsederat extimas partes, novum parumque aliquando temptatum commentum
+        adgressus. quod si impetrasset, fulminis modo cuncta vastarat. erat autem quod cogitabat huius modi.
+    </p>
+
+    <img id="home_img" src="{{ asset('img/film_festival.jpg') }}">
+
+
+{% endblock %}
+

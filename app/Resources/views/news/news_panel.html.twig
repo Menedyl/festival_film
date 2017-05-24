@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+
+        <h4 class="panel-title">Actualités</h4>
+
+    </div>
+    <div class="panel-body">
+
+        {% for news in newsList %}
+            <div class="news_panel_news">
+
+                <h4 class="news_list_news_title">{{ news.title }}</h4>
+
+                <p class="news_list_news_date"><em>Publié le {{ news.dateCreate | date('d/m à H:i:s') }}</em></p>
+
+                <p class="news_list_news_content">{{ news.description }}</p>
+
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
