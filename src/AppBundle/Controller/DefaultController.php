@@ -2,7 +2,9 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\AppBundle;
 use AppBundle\Form\ContactType;
+use AppBundle\Form\LoginType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -30,5 +32,12 @@ class DefaultController extends Controller
 
     }
 
+    /**
+     * @Route("/mentions_legales", name="mentions_legales")
+     */
+    public function mentionsLegalesAction()
+    {
+        return $this->render('mentions_legales.html.twig');
+    }
 
 }

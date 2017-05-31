@@ -10,14 +10,11 @@
 
 #film_registration_legend{
     color: #F5871F;
+    border-color: #F5871F;
 }
 
 #film_registration_form{
     margin-top: 1em;
-}
-
-.form-control{
-    width: 80%;
 }
 
 .control-label{
@@ -35,8 +32,4 @@
 
 #film_registration_btn_valid:hover{
     color: #916319;
-}
-
-#film_registration_form_register .form-control{
-    width: 25%;
 }
