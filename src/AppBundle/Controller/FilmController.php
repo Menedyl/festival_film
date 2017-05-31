@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Film;
 use AppBundle\Form\FilmType;
 use AppBundle\Form\RegisterType;
+use Doctrine\Common\Collections\Collection;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Form;
@@ -53,6 +54,7 @@ class FilmController extends Controller
     {
         $currentDate = new \DateTime();
 
+        /** @var Collection $films */
         $films = $this->getDoctrine()->getRepository('AppBundle:Film')->findAll();
 
         return $this->render('film/films.html.twig', array(

@@ -33,3 +33,8 @@
 #film_registration_btn_valid:hover{
     color: #916319;
 }
+
+#film_registration_film_diffusion{
+    text-align: left;
+    font-weight: bold;
+}
