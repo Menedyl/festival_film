@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Film;
 use AppBundle\Form\FilmType;
 use AppBundle\Form\RegisterType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;

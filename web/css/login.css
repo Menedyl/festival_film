@@ -1,0 +1,17 @@
+legend{
+    color: #F5871F;
+    border-color: #F5871F;
+}
+
+.form-group{
+    color: #F5871F;
+}
+
+.btn{
+    float: right;
+    color: white;
+    background-color: #F5871F;
+    border-color: black;
+    font-weight: bold;
+    font-size: large;
+}
